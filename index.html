@@ -1,78 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>TVDE Daily Management</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <h1>🚖 TVDE Daily Management 🚖</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TVDE Manager - Professional Driver Dashboard</title>
+    <meta name="description" content="Professional financial management dashboard for TVDE drivers. Track earnings, expenses, and profits from Uber, Bolt, and other ride-hailing platforms." />
+    <meta name="author" content="Lovable" />
 
-  <form id="tvdeForm">
-    <label>Date: <input type="date" id="data" required></label><br /><br />
-    <label>Uber: <input type="number" id="uber" step="0.01"></label>
-    <label>Bolt: <input type="number" id="bolt" step="0.01"></label>
-    <label>Tips: <input type="number" id="tips" step="0.01"></label>
-    <label>Prizes: <input type="number" id="prizes" step="0.01"></label><br /><br />
-    <label>Charging: <input type="number" id="charging" step="0.01"></label>
-    <label>Washing: <input type="number" id="washing" step="0.01"></label>
-    <label>Tolls: <input type="number" id="tolls" step="0.01"></label>
-    <label>Snacks: <input type="number" id="snacks" step="0.01"></label>
-    <label>Other: <input type="number" id="other" step="0.01"></label><br /><br />
-    <button type="submit" class="btn">Add</button>
-  </form>
+    <meta property="og:title" content="TVDE Manager - Professional Driver Dashboard" />
+    <meta property="og:description" content="Professional financial management dashboard for TVDE drivers. Track earnings, expenses, and profits from Uber, Bolt, and other ride-hailing platforms." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
 
-  <h2>Daily Records</h2>
-  <table id="tabela">
-    <thead>
-      <tr>
-        <th>Date</th>
-        <th>Uber</th>
-        <th>Bolt</th>
-        <th>Tips</th>
-        <th>Prizes</th>
-        <th>Charging</th>
-        <th>Washing</th>
-        <th>Tolls</th>
-        <th>Snacks</th>
-        <th>Other</th>
-        <th>Net Profit</th>
-        <th>Net + 2</th>
-        <th>Delete</th>
-      </tr>
-    </thead>
-    <tbody></tbody>
-  </table>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@lovable_dev" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+  </head>
 
-  <h2>Monthly Summary</h2>
-  <table id="resumoMensal">
-    <thead>
-      <tr>
-        <th>Month</th>
-        <th>Days</th>
-        <th>Uber</th>
-        <th>Bolt</th>
-        <th>Tips</th>
-        <th>Prizes</th>
-        <th>Charging</th>
-        <th>Washing</th>
-        <th>Tolls</th>
-        <th>Snacks</th>
-        <th>Other</th>
-        <th>Net Profit</th>
-        <th>Net + 2</th>
-        <th>Export</th>
-      </tr>
-    </thead>
-    <tbody></tbody>
-  </table>
-
-  <!-- Libraries -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.7.0/jspdf.plugin.autotable.min.js"></script>
-
-  <!-- Entry point -->
-  <script type="module" src="js/main.js"></script>
-</body>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
